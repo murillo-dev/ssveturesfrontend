@@ -1,9 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+const url: string = 'http://localhost:3000/';
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EventService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  getEvents() {
+    return this.http.get(`${url}events`);
+  }
 }
