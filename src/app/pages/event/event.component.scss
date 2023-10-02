@@ -1,0 +1,13 @@
+.card {
+  max-width: 400px;
+  min-width: 370px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: white;
+  width: 1600px;
+  row-gap: 10px;
+}

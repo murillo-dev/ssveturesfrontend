@@ -1,0 +1,19 @@
+<h1 style="color: white">Events</h1>
+
+<main class="content">
+  <ng-container *ngFor="let event of events">
+    <mat-card class="card">
+      <mat-card-title>{{ event.name }}</mat-card-title>
+      <mat-card-content>
+        <p>{{ event.description }}</p>
+        <p>{{ event.start_date }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Details</button>
+        <button mat-button color="warn" >
+          Delete
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</main>
