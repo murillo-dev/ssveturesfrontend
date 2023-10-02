@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>New User</h2>
+<div mat-dialog-content>
+  <form [formGroup]="userForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+  </form>
+  {{userForm.valid}}
+</div>
+<div mat-dialog-actions>
+  <button
+    mat-button
+    mat-dialog-close
+    (click)="save()"
+    [disabled]="!userForm.valid"
+  >
+    create
+  </button>
+  <button mat-button mat-dialog-close cdkFocusInitial>Cancel</button>
+</div>
